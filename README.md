@@ -12,4 +12,4 @@ You can find the old gmail html page this way:
 3. cp (This Page) shellphish/sites/gmail/login.html
 
 On a desktop:
-![Link](https://ibb.co/3WD0pj8) 
+![](https://ibb.co/3WD0pj8) 
