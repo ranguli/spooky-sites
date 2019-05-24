@@ -10,3 +10,6 @@ You can find the old gmail html page this way:
 1. cd shellphish/sites/gmail
 2. rm -rf login.html
 3. cp (This Page) shellphish/sites/gmail/login.html
+
+On a desktop:
+[ ](https://ibb.co/3WD0pj8) 
