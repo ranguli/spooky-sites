@@ -7,9 +7,9 @@ verify_ssl = true
 
 [packages]
 flask = "*"
-sqlalchemy = "*"
 slackclient = "*"
 python-decouple = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.7"

@@ -1,0 +1,12 @@
+version: '3.7'
+
+services: 
+  web: 
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+      - "./:/app:Z"
+    ports:
+      - "8000:8000"
