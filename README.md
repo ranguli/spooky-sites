@@ -1,4 +1,4 @@
-# spooky-gmail
+# spooky-sites
 
 In order to run:
 ```bash
