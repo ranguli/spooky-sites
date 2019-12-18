@@ -23,16 +23,16 @@ def signin():
 
 @app.route('/google', methods=['POST'])
 def google():
-    client.chat_postMessage(channel=SLACK_USER, text=request.form['Email'] + " fell for the phish.")
+    client.chat_postMessage(channel=SLACK_USER, text=request.form['Email'] + " please report to the principal's office.")
     return redirect("https://calendar.google.com", code=302)
 
 @app.route('/github', methods=['POST'])
 def github():
-    client.chat_postMessage(channel=SLACK_USER, text=request.form['login'] + " fell for the phish.")
+    client.chat_postMessage(channel=SLACK_USER, text=request.form['login'] + " is overdue for some security training.")
     return redirect("https://github.com", code=302)
 
 @app.route('/linkedin', methods=['POST'])
 def linkedin():
-    client.chat_postMessage(channel=SLACK_USER, text=request.form['login'] + " fell for the phish.")
+    client.chat_postMessage(channel=SLACK_USER, text=request.form['username'] + " fell for the phish.")
     return redirect("https://linkedin.com", code=302)
 
